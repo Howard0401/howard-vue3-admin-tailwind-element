@@ -19,7 +19,7 @@ module.exports = {
       },
       width: {
         "sidbar": sidbarWidth,
-        "main_content_left_normal": "35rem",
+        "main_content_left_normal": "40rem",
         "main_content_left_expand": "15rem",
         "main_content": mainContentWidth,
       },
