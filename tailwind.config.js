@@ -14,8 +14,8 @@ module.exports = {
       height: {
         "dash_board_logo": sidbarLogoListH,
         "dash_board_header": dashBoardHeader,
+        "dash_board_body":`calc(100% - ${dashBoardHeader})`,
         "sidbar_dropdown_list": sidbarDropdownListH,
-        
       },
       width: {
         "sidbar": sidbarWidth,

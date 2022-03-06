@@ -7,12 +7,13 @@
   </div>
 
   <sidebarSubListVue/>
-  <tablerVue/>
+  <!--<tablerVue/>-->
+  <router-view></router-view>
         <!-- @mousemove="isSidebarSmallIconHovered = false; resetCurSmallIconHoverIdx();" -->
         <!-- @mouseover="isSidebarSmallIconHovered = false; resetCurSmallIconHoverIdx();"> -->
         <!-- @mouseleave="isSidebarSmallIconHovered = false; resetCurSmallIconHoverIdx();" -->
 
-  <div class="h-full w-full bg-black" @click="resetCurSmallIconHoverIdx();isSidebarSmallIconHovered = false;"></div>
+  <!--<div class="h-full w-full bg-black" @click="resetCurSmallIconHoverIdx();isSidebarSmallIconHovered = false;"></div>-->
 
 
   </div>
@@ -36,7 +37,7 @@ import {
 import headerVue from './header.vue';
 import sidebarVue from './sidebar.vue'
 import sidebarSubListVue from './sidebarSubList.vue'
-import tablerVue from './table.vue'
+// import tablerVue from './table.vue'
 
 
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-20 flex w-full bg-green-300 -z-20"
+    <div class="flex h-dash_board_body w-full bg-gray-600 -z-20"
         @click="resetCurSmallIconHoverIdx();isSidebarSmallIconHovered = false;"
         >
     <div class="" :class="isHeaderOpen ? `w-main_content_left_normal duration-100`:
