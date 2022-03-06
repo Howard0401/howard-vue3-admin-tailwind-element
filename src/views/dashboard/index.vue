@@ -1,21 +1,52 @@
 <template>
 <div class="bg-slate-200 h-full w-full">
   <div class="w-full flex h-dash_board_header">
-
     <!-- Sidebar -->
     <div class="h-screen bg-yellow-200 w-sidbar block "
-       :class="isHeaderOpen ? 'duration-300':'duration-100 translate-x-dash_board_trans'">
-      <div class="dashboard-logo h-dash_board_header border-b border-black">AAA</div>
+       :class="isHeaderOpen ? 'duration-300 ease-in-out':'duration-100 translate-x-dash_board_trans'">
+      <div class="dashboard-logo h-dash_board_header border-b border-black mt-4">
+        <div class="h-dash_board_header items-center">AAA</div> 
+      </div>
 
       <!-- sidebar list -->
       <div :class="isSidebarClicked ? '':''"
+            @mouseleave="isSidebarSmallIconHovered = false" 
             class="border-black border-b border-x h-sidbar_dropdown_list w-80">
           <div class="flex">
-            <div class="h-sidbar_dropdown_list w-60">item1</div>
-            <div class="h-sidbar_dropdown_list w-20 
-                        flex justify-center
-                        cursor-pointer bg-slate-400" @click="onClickSidebar()"
-                 :class="isHeaderOpen ? `` : `hidden` " >xxx</div>
+            <div class="flex justify-center items-center
+                        w-16 ml-1 h-sidbar_dropdown_list ">item logo
+            </div>
+            <div class="flex justify-center items-center 
+                        w-48 h-sidbar_dropdown_list
+                        cursor-pointer">item1
+            </div>
+            <div v-if="isHeaderOpen" 
+                  class="flex justify-center items-center  
+                        w-16 h-sidbar_dropdown_list" 
+                        @click="onClickSidebar()"
+                 :class="isHeaderOpen ? `` : `hidden` " >xxx
+            </div>
+
+            <div v-if="isHeaderOpen === false">
+                <div class="flex justify-center items-center  
+                        w-16 h-sidbar_dropdown_list  
+                        cursor-pointer"
+                    @mouseover="isSidebarSmallIconHovered = true">
+                    smlogo
+                </div>
+                <div @mouseleave="isSidebarSmallIconHovered = false" 
+                    class="ml-[4.1rem] -mt-10 small-icon-hover-list fixed h-28 w-40 bg-gray-600"
+                    :class="isSidebarSmallIconHovered ? `hover:delay-300 ease-in-out`:`hidden` ">
+                      <div class="flex justify-start items-center cursor-pointer 
+                                hover:bg-slate-50 rounded 
+                                  hover:delay-200
+                                  hover:opacity-50
+                                  ease-in-out
+                                  h-12">
+                          djdgjghdjdfj
+                      </div>
+                </div>
+            </div>
           </div>
       </div>
 
@@ -23,28 +54,31 @@
       <div class="w-sidbar" :class="isSidebarClicked ? 'duration-[90ms] bg-green-100 h-12' : 
                                                   'duration-100 h-0 text-yellow-200 text-[0px]'">
         <div class="flex justify-start items-center
-                    ml-4 h-12">
+                    ml-4 h-12
+                    cursor-pointer">
             subprop
         </div>
       </div>
       <div class="w-sidbar" :class="isSidebarClicked ? 'duration-[90ms] bg-green-100 h-12' : 
                                                   'duration-100 h-0 text-yellow-200 text-[0px]'">
         <div class="flex justify-start items-center
-                    ml-4 h-12">
+                    ml-4 h-12
+                    cursor-pointer">
             subprop
         </div>
       </div>
       <div class="w-sidbar" :class="isSidebarClicked ? 'duration-[90ms] bg-green-100 h-12' : 
                                                   'duration-100 h-0 text-yellow-200 text-[0px]'">
         <div class="flex justify-start items-center
-                    ml-4 h-12">
+                    ml-4 h-12
+                    cursor-pointer">
             subprop
         </div>
       </div>
     </div>
 
     <!-- Header leftside ICON for open/close Sidebar -->
-    <div @click="isHeaderOpen = !isHeaderOpen" 
+    <div @click="isHeaderOpen = !isHeaderOpen; isSidebarClicked = false;" 
           class="bg-green-200 w-20"
           :class="isHeaderOpen? 'duration-200': 'translate-x-dash_board_trans duration-200'">
           <div class="flex justify-center h-dash_board_header items-center cursor-pointer ">OO</div>     
@@ -93,10 +127,15 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 const isHeaderOpen = ref(true)
-const isSidebarClicked = ref(true)
+const isSidebarClicked = ref(false)
+const isSidebarSmallIconHovered = ref(false)
+
 const onClickSidebar = () => {
   isSidebarClicked.value = !isSidebarClicked.value
 }
+
+
+
 
 
 interface User {

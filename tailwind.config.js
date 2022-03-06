@@ -1,5 +1,8 @@
-const sidbarWidth = `20rem`//20rem
+const sidbarWidth = `20rem`
 const mainContentWidth = `calc(100vw-${sidbarWidth})`
+const sidbarDropdownListH = `2.5rem`
+const dashBoardHeader = `3rem`
+const sidbarLogoListH = `calc(${dashBoardHeader} - ${sidbarDropdownListH})`
 
 module.exports = {
   content: [
@@ -9,10 +12,10 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        "login-page-block":"26rem",
-
-        "sidbar_dropdown_list":"3rem",
-        "dash_board_header":"4rem",
+        "dash_board_logo": sidbarLogoListH,
+        "dash_board_header": dashBoardHeader,
+        "sidbar_dropdown_list": sidbarDropdownListH,
+        
       },
       width: {
         "sidbar": sidbarWidth,
