@@ -7,12 +7,13 @@ const publicRoutes = [
   },
   {
     path: '/dashboard',
-    component: () => import('../views/dashboard/index.vue')
+    component: () => import('../views/dashboard/index.vue'),
+    // children: [{
+    //   path:,
+    //   component: () => import('../views/dashboard/'),
+      
+    // }],
   },
-  // {
-  //   path: '/',
-  //   component: () => import('@/views/login/index.vue')
-  // },
 ]
 
 const router = createRouter({
