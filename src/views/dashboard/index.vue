@@ -21,7 +21,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import {
-  isHeaderOpen,isSidebarClicked,
+  isHeaderOpen,
+  isSidebarClicked,
   isSidebarSmallIconHovered,
   isCurSmallIconHoverIdx,
   resetCurSmallIconHoverIdx,

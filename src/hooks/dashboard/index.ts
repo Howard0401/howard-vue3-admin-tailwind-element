@@ -19,7 +19,8 @@ export const hoveSidebarrSmallIcon = () =>  {
 //   return 
 // })
 
-export const onClickSidebar = () => {
+export const onClickSidebar = ():void => {
+  console.log("onClickSidebar()",)
   isSidebarClicked.value = !isSidebarClicked.value
 }
 

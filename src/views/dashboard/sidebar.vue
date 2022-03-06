@@ -19,9 +19,9 @@
                 </div>
                 <div v-if="isHeaderOpen" 
                       class="flex justify-center items-center  
-                            w-16 h-sidbar_dropdown_list cursor-pointer" 
-                            @click="onClickSidebar()"
-                    :class="isHeaderOpen ? `` : `hidden` " >xxx
+                            w-16 h-sidbar_dropdown_list cursor-pointer z-20" 
+                      @click="onClickSidebar()"
+                      :class="isHeaderOpen ? `` : `hidden` " >xxx
                 </div>
                 <div v-if="isHeaderOpen === false">
                 <!-- @mouseenter="isSidebarSmallIconHovered = false;isCurSmallIconHoverIdx = i; isSidebarSmallIconHovered = true;"
@@ -77,9 +77,11 @@ import {
   isSidebarSmallIconHovered,
   isCurSmallIconHoverIdx,
   resetCurSmallIconHoverIdx,
+  hoveSidebarrSmallIcon,
+  computedCurSmallIconHoverIdx,
+  // getCurSmallIconHoverIdx,
   onClickSidebar,
   tableData,
 } from '../../hooks/dashboard'
-
 
 </script>
