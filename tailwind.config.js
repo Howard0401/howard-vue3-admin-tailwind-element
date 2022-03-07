@@ -22,9 +22,13 @@ module.exports = {
         "main_content_left_normal": "40rem",
         "main_content_left_expand": "15rem",
         "main_content": mainContentWidth,
+        
       },
       translate: {
         "dash_board_trans":"-16rem",
+      },
+      margin: {
+        "conpensate_side_bar_sublist": sidbarWidth,
       },
 
     },

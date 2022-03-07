@@ -31,8 +31,10 @@
                             hover:delay-200
                             hover:opacity-50
                             hover:shadow-lg
-                            ease-in-out"
-                            @click="resetCurSmallIconHoverIdx(); 
+                            ease-in-out
+                            z-50"
+                        :class="isSidebarSmallIconHovered ? ``:`cursor-pointer`"
+                            @click="
                             isCurSmallIconHoverIdx = i; 
                             isSidebarSmallIconHovered = true;">
                         smlogo
