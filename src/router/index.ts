@@ -6,7 +6,7 @@ const publicRoutes = [
     component: () => import('../views/login/index.vue')
   },
   {
-    path: '/dashboard/:id',
+    path: '/dashboard/',
     component: () => import('../views/dashboard/index.vue'),
     children: [{
       path: 'table',

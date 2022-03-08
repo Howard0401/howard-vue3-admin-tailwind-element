@@ -1,6 +1,7 @@
 import { computed, ref, toRefs } from "vue"
 
 export const isHeaderOpen = ref(true)
+export const isSettingOpen = ref(true)
 export const isSidebarClicked = ref(false)
 export const isSidebarSmallIconHovered = ref(false)
 export const isCurSmallIconHoverIdx = ref(0)

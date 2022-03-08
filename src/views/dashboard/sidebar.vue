@@ -1,5 +1,6 @@
 <template>
-    <div class="h-screen bg-yellow-200 w-sidbar block "
+    <div class="h-screen min-h-full_screen  
+              bg-yellow-200 w-sidbar block "
        :class="isHeaderOpen ? 'duration-300 ease-in-out':'duration-100 translate-x-dash_board_trans'">
       <div class="dashboard-logo h-dash_board_header border-b border-black mt-4">
         <div class="h-dash_board_header items-center">AAA</div> 
