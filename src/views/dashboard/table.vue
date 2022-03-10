@@ -1,5 +1,6 @@
 <template>
   <div class="h-dash_board_body w-full bg-gray-600 -z-20"
+       :class="isHeaderOpen ? `w-full`:`w-80`"
         @click="resetCurSmallIconHoverIdx();isSidebarSmallIconHovered = false;"
         >
     <div class="" :class="isHeaderOpen ? `w-main_content_left_normal duration-100`:
@@ -26,12 +27,13 @@
     </el-table>
     <!-- <canvas id="echartJS" width="400" height="600"></canvas> -->
     <canvas style="width: 10rem; height:10rem;" id="chartJS" width="10" height="10"></canvas>
+    <test></test>
     <div :class="isHeaderOpen ? `w-40 duration-100`:`w-20 duration-100`"></div>
 
   </div>
   
 </template>
-<script setup lang="ts">
+<script setup>
 import { onMounted } from 'vue' 
 import {
   isHeaderOpen,
@@ -91,7 +93,7 @@ import {
   Title,
   Tooltip,
   SubTitle,
-  ChartItem
+  // ChartItem
 } from 'chart.js';
 
 Chart.register(
@@ -137,7 +139,12 @@ echarts.use([
   CanvasRenderer,
 ]);
 
+
+// d3.js
+// import * as d3 from "d3";
+// const test = d3.selectAll("test");
 // 接下来的使用就跟之前一样，初始化图表，设置配置项
+
 onMounted(() => {
     const mm = document.getElementById('echartJS')
     console.log("mm",mm)
@@ -168,7 +175,7 @@ onMounted(() => {
 
 
   
-  const ctx = document.getElementById('chartJS') as ChartItem
+  const ctx = document.getElementById('chartJS')// as ChartItem
   if(ctx) {
     const chatJs = new Chart(ctx, {
     type: 'bar',

@@ -7,7 +7,7 @@
                  resetCurSmallIconHoverIdx()
                  ;isSidebarSmallIconHovered = false;" 
           class="bg-green-200 w-sidebar_open_icon"
-          :class="isHeaderOpen? 'duration-200': 'translate-x-dash_board_trans duration-200'">
+          :class="isHeaderOpen? 'translate-x-0 duration-200': 'translate-x-dash_board_trans duration-100'">
           <div class="flex justify-center h-dash_board_header items-center cursor-pointer ">OO</div>     
     </div>
     

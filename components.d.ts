@@ -23,6 +23,7 @@ declare module 'vue' {
     ElTabs: typeof import('element-plus/es')['ElTabs']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     SvgIcon: typeof import('./src/components/SvgIcon/index.vue')['default']
+    Table: typeof import('./src/components/test/table.vue')['default']
   }
 }
 
