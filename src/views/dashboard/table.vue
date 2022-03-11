@@ -29,7 +29,9 @@
     <canvas style="width: 10rem; height:10rem;" id="chartJS" width="10" height="10"></canvas>
     <test></test>
     <div :class="isHeaderOpen ? `w-40 duration-100`:`w-20 duration-100`"></div>
-
+    <svg> 
+  <circle class="target" style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
+</svg>
   </div>
   
 </template>
@@ -96,6 +98,10 @@ import {
   // ChartItem
 } from 'chart.js';
 
+// d3.js
+import * as d3 from "d3";
+
+
 Chart.register(
   ArcElement,
   LineElement,
@@ -140,9 +146,11 @@ echarts.use([
 ]);
 
 
-// d3.js
-// import * as d3 from "d3";
-// const test = d3.selectAll("test");
+
+
+d3
+  .select(".target")  // select the elements that have the class 'target'
+  .style("stroke-width", 8) // change their style: stroke width is not equal to 8 pixel
 // 接下来的使用就跟之前一样，初始化图表，设置配置项
 
 onMounted(() => {
@@ -218,6 +226,8 @@ onMounted(() => {
 
 
 
+
+    
 })
 
 
